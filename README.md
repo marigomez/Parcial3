@@ -1,2 +1,2 @@
 # Parcial3
-strategy, main, A
+strategy, main, A, context
