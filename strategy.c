@@ -5,27 +5,14 @@
 
 #include "strategy.h"
 
-void estrategia_ctor (strategy * const me, estrategias);
-{
-    me->estrategiaA = estrategiaA;
-}
+static void do_algoritmo_ (Istrategy * const me);
 
-char estrategia_getA (strategy * const me);
+void estrategia_ctor(Istrategy * const me)
 {
-    return me->estrategiaA
-}
-
-static char imprimir_A(strategy const * const me);
-static char organizar_A(strategy const * const me);
-
-void estrategia_ctor(strategy * const me)
-{
-    static struct estrategiaVtlb const vtbl = 
+    static struct StrategyVtbl const vtbl = 
     {
-        &organizar_A,
-        &imprimir_A
+        &do_algoritmo_,
     };
-    
-    me->vptr = &vtbl
-    me->strategy= strategy;
+
+    me->vptr = &vtbl;
 }

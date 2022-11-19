@@ -4,9 +4,10 @@
 
 #include "estrategiaA.h"
 
-void estrategia_ctor (strategy * const me, estrategias);
+void estrategiaA_ctor (estrategiaA * const me)
 {
-    orden_ctor(me->super strategy);
+    estrategia_ctor(&me->super);
 
-    me->strategy= strategy;
+    printf("aca se implementa estrategia A \n");
 }
+

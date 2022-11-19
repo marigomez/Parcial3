@@ -3,12 +3,11 @@
 #include <string.h>
 
 #include "strategy.h"
+#include "estrategiaA.h"
 
 int main ()
 {
-    strategia_x(estrategiaA);
 
-    printf("Estrategia A \n"), estrategia_x;
+    do_algoritmo((Istrategy)estrategiaA);
+};
 
-    return 0;
-}

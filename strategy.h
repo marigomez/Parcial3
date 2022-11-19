@@ -5,41 +5,22 @@
 #ifndef STRATEGY_H
 #define STRATEGY_H
 
-#include "estrategias.h"
-
-typedef struct strategy
-{
-   char estrategias;
-}; estrategiaA;
-
-void estrategia_x(strategy* const me, estrategias);
-
-#endif
 
 struct StrategyVtbl;
-typedef struct 
+typedef struct
 {
-    struct StrategyVtbl const *vptr;
-    estrategia_x;
-        
-} estrategias;
+   struct StrategyVtbl const *vptr;
+}Istrategy;
 
-struct estrategiaVtbl
+struct StrategyVtbl
 {
-    char (*orden) (estrategias const * const me);
-    char (*imprimir) (estrategias const * const me);
+    void (*algoritmo) (Istrategy const * const me);
+   
 };
 
-void estrategia_ctor(estrategias * const me);
-
-static inline char organizar_A(strategy const * const me)
+static inline void do_algoritmo (Istrategy const * const me)
 {
-    (*me->vptr->Organizar)(me);
+    (*me->vptr->algoritmo) (me);
 }
-static inline char imprimir_A(strategy const * const me)
-{
-    (*me->vptr->imprimir)(me);
-}
-
 
 #endif 
