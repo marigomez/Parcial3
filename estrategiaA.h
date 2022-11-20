@@ -6,13 +6,13 @@
 #define ESTRATEGIAA_H
 
 #include "strategy.h"
+
 typedef struct 
 {
-    strategy super;
-    char estrategias;
-    
-} orden; 
+    Istrategy super;
+      
+} estrategiaA; 
 
-void orden_ctor(strategy * const me, estrategias);
+void estrategiaA_ctor(estrategiaA * const me);
 
 #endif

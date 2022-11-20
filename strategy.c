@@ -5,6 +5,7 @@
 
 #include "strategy.h"
 
+
 static void do_algoritmo_ (Istrategy * const me);
 
 void estrategia_ctor(Istrategy * const me)
@@ -15,4 +16,9 @@ void estrategia_ctor(Istrategy * const me)
     };
 
     me->vptr = &vtbl;
+}
+
+static void do_algoritmo_(Istrategy const * const me)
+{
+    assert(0);
 }

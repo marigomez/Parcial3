@@ -7,7 +7,15 @@
 
 int main ()
 {
+    estrategiaA v1;
+    &v1.super;
+    Istrategy const;
+estrategia_ctor(&v1);
 
-    do_algoritmo((Istrategy)estrategiaA);
+Istrategy *Istrategy = Istrategy_new();
+
+
+do_algoritmo((Istrategy*)estrategiaA);
+
 };
 
