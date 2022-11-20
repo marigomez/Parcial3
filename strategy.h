@@ -1,10 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #ifndef STRATEGY_H
 #define STRATEGY_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 struct StrategyVtbl;
 typedef struct
